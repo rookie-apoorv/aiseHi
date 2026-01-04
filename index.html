@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<div class="container">
+  <header>
+
+  <title>Pet Shop Catalog</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Pet Shop Catalog</h1>
+  <p>Browse products by pet type</p>
+</header>
+
+<section class="pet-grid" id="petGrid"></section>
+
+<script src="js/data.js"></script>
+<script>
+  const petGrid = document.getElementById("petGrid");
+
+  Object.keys(PET_DATA).forEach(petKey => {
+    const pet = PET_DATA[petKey];
+    petGrid.innerHTML += `
+      <a class="pet-card" href="catalog.html?pet=${petKey}">
+        <h2>${pet.name}</h2>
+        <p>${pet.description}</p>
+      </a>
+    `;
+  });
+</script>
+</div>
+
+</body>
+</html>
