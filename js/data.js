@@ -50,5 +50,24 @@ const PET_DATA = {
         products: []
       }
     }
+  },
+
+  fish: {
+    name: "Fish",
+    description: "Aquarium supplies and fish food",
+    categories: {
+        food: {
+            name: "Food",
+            subcategories: ["Flakes", "Pellets"],
+            products: [
+                {
+                    id: "fish_food_1",
+                    name: "Tropical Flakes",
+                }            
+            ]
+        }
+    }
   }
+
+
 };
